@@ -3,7 +3,6 @@
 !/.gitignore
 !/PrefixTreeCDD/
 !/edbn/
-Data/*
-!Data/__init__.py
-!Data/data.py
+!/Data/__init__.py
+!/Data/data.py
 

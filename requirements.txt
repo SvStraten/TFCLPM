@@ -1,0 +1,17 @@
+# Core Libraries
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+
+# Process Mining Libraries
+pm4py
+
+# Drift Detection & Concept Drift
+river  # Online ML & drift detection (may need Python 3.10 or lower)
+
+# Machine Learning & Deep Learning
+scikit-learn
+tensorflow
+
