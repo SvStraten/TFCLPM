@@ -28,64 +28,6 @@ from edbn.Utils.LogFile import LogFile
 import edbn.Predictions.setting as setting
 from edbn import Methods
 
-# def preprocess(file):
-#     # Import the data
-#     data = pd.read_csv(file, low_memory=False)
-#     timeformat = "%Y-%m-%d %H:%M:%S"
-#     numEvents = data.shape[0]
-#     print("Total number of events: ", numEvents)
-
-#     # Extract the filename from the file path
-#     filename = os.path.basename(file)
-#     dataName = os.path.splitext(filename)[0]
-#     print("Dataset: ", dataName)
-
-#     d = Data(dataName,
-#                 LogFile(filename=file, delim=",", header=0, rows=None, time_attr="completeTime", trace_attr="case",
-#                         activity_attr='event', convert=False))
-   
-#     d.logfile.keep_attributes(['event', 'completeTime'])
-
-#     m = Methods.get_prediction_method("SDL")
-#     print(m)
-    
-#     s = setting.STANDARD
-
-#     d.prepare(s)
-#     print('### Data Preprocessed')
-
-#     basic_model = m.train(d.get_test_batchi(0, 500))
-#     print('### Basic model has been trained')
-
-#     # Test the time format
-#     connect_symbol="-"
-#     if '/' in d.logfile.get_data()['completeTime'][0]:
-#         connect_symbol='/'
-#     formats = [
-#         f"%Y{connect_symbol}%m{connect_symbol}%d %H:%M:%S%z",  # With timezone offset
-#         f"%Y{connect_symbol}%m{connect_symbol}%d %H:%M:%S",  # Standard format
-#         f"%Y{connect_symbol}%m{connect_symbol}%d %H:%M:%S.%f"  # With microseconds
-#     ]
-
-#     for timeformat in formats:
-#         try:
-#             pd.to_datetime(d.logfile.get_data()['completeTime'], format=timeformat, exact=True)
-#             print(d.logfile.get_data()['completeTime'])
-#             print("The time format is:", timeformat)
-#             break
-#         except ValueError:
-#             continue
-
-
-#     # full_batch = d.create_batch(split='normal',timeformat=timeformat)
-#     monthly_batches = d.create_batch(split='months',timeformat=timeformat)  # Get monthly batches
-#     daily_batches = d.create_batch(split='days',timeformat=timeformat)
-
-#     data_sampler = Sampler(data=d)
-#     print('### Sampler done')
-
-#     return dataName, data_sampler, basic_model, monthly_batches, daily_batches
-
 def preprocess(file):
     """Preprocesses the event log data from the given CSV file."""
 
@@ -140,15 +82,6 @@ def preprocess(file):
             break
         except ValueError:
             continue
-
-    # # If none of the formats match, fall back to automatic conversion
-    # if not pd.api.types.is_datetime64_any_dtype(d.logfile.get_data()['completeTime']):
-    #     d.logfile.get_data()['completeTime'] = pd.to_datetime(d.logfile.get_data()['completeTime'], errors='coerce')
-    #     print("Falling back to automatic datetime conversion.")
-        
-    # # **Sort the event log by timestamp**
-    # d.logfile.get_data().sort_values(by="completeTime", ascending=True, inplace=True)
-    # print("### Event log sorted by timestamp.")
 
     # Create batches
     monthly_batches = d.create_batch(split='months', timeformat=timeformat)  # Get monthly batches
@@ -235,6 +168,7 @@ class TFCLPM:
                     y = np.asarray([_['trgt'] for _ in recent_buffer])
 
                     main_window_distribution = Counter(y)
+                    print(main_window_distribution)
                     
                     xf=x[:]
                     yf=y[:]
@@ -352,13 +286,22 @@ class TFCLPM:
                         if self.history_buffer:  # Maintain historical buffer if enabled
                             history_hard_buffer.extend(new_samples)
                             history_hard_buffer = sorted(history_hard_buffer, key=lambda f: f[0], reverse=True)[:self.history_buffer_size]
+
+                            # Extract labels from the history buffer
+                            history_buffer_labels = [entry[2] for entry in history_hard_buffer]  # Assuming (loss, sample, label) structure
+
+                            # Compute the distribution
+                            history_buffer_distribution = Counter(history_buffer_labels)
                         
                             # Extract top 100 diverse samples for final hard buffer
-                            class_counts = main_window_distribution
-                            num_labels = len(class_counts)
-                            max_per_class = (self.hard_buffer_size * 2) // num_labels
+                            max_class_count = max(main_window_distribution.values())
+                            class_count = len(main_window_distribution)
+                            print("Max class count: ", max_class_count)
+                            # max_per_class = (self.history_buffer_size) // class_count
+                            max_per_class = (2 * self.hard_buffer_size) // class_count
+                            # max_per_class = max_class_count
+                            print("Max samples per class: ", max_per_class)
                             
-
                             final_hard_buffer = []
                             sampled_classes = Counter()
 

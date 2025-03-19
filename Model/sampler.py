@@ -6,14 +6,6 @@ import os
 import logging
 import tensorflow as tf
 
-# Suppress TensorFlow Warnings
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress INFO and WARNING logs
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'  # Disable oneDNN optimizations warning
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Disable CUDA logs if not using GPU
-
-tf.get_logger().setLevel('ERROR')  # Hide unnecessary logs
-logging.getLogger('tensorflow').setLevel(logging.ERROR)  # Suppress all TensorFlow logs
-
 import numpy as np
 import os, sys, time
 import numpy.random as rn

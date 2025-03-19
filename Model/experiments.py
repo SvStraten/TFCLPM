@@ -3,11 +3,6 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def experiment(data, learning_object, tags=['Online Continual','Online Continual No Hardbuffer','Online','Online No Hardbuffer']):
-    training_losses={}
- 
-    loss_window_means={}
-    update_tags={}
-    loss_window_variances={}
     settings={'Online Continual':(True, True),
              'Online Continual No Hardbuffer':(False, True),
              'Online':(True, False),

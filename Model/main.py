@@ -23,7 +23,6 @@ from Data.data import Data
 from edbn.Utils.LogFile import LogFile
 import edbn.Predictions.setting as setting
 from edbn import Methods
-from Model.incremental import IncrementalUpdateW1, IncrementalUpdateLastDrift
 
 def main(method, file, recent_buffer_size, hard_buffer_size, history_buffer_size, history_buffer, MAS_weight):
 
@@ -47,25 +46,7 @@ def main(method, file, recent_buffer_size, hard_buffer_size, history_buffer_size
                                 history_buffer=history_buffer,
                                 history_buffer_size=history_buffer_size,
                                 model=basic_model)
-
-    if method == 'IncrementalUpdate (w=1)':
-        print("Testing method: IncrementalUpdate (w=1)")
-        dataName, data_sampler, basic_model, monthly_batches, daily_batches = preprocess(file) 
-        learning_object = IncrementalUpdateW1(model = basic_model,
-                                              monthly_batches=monthly_batches,
-                                              daily_batches=daily_batches,
-                                              recent_buffer_size=recent_buffer_size)
         
-    if method == 'IncrementalUpdate (w=LastDrift)':
-        print("Testing method: IncrementalUpdate (w=LastDrift)")
-        dataName, data_sampler, basic_model, monthly_batches, daily_batches = preprocess(file) 
-        learning_object = IncrementalUpdateLastDrift(model = basic_model,
-                                              recent_buffer_size=recent_buffer_size,
-                                              monthly_batches=monthly_batches,
-                                              daily_batches=daily_batches,
-                                              dataName=dataName)
-        
-
     start_time = time.time()
 
     tags=[
@@ -101,14 +82,14 @@ def get_args():
     parser = argparse.ArgumentParser(description="Run experiments with different configurations.")
 
     parser.add_argument("--dataset", type=str, default="Data/BPIC2015.csv", help="Path to the dataset (CSV file).")
-    parser.add_argument("--method", type=str, default="IncrementalUpdate (w=1)", help="Prediction method to use.")
+    parser.add_argument("--method", type=str, default="TFCLPM", help="Prediction method to use.")
 
     parser.add_argument("--recent_buffer_size", type=int, default=500, help="Recent buffer size.")
     parser.add_argument("--hard_buffer_size", type=int, default=100, help="Hard buffer size.")
     parser.add_argument("--history_buffer_size", type=int, default=300, help="History buffer size.")
     parser.add_argument("--MAS_weight", type=float, default=0.5, help="MAS weight.")
     parser.add_argument("--history_buffer", type=bool, default=True, help="Whether to use history buffer (True/False).")
-    parser.add_argument("--repetitions", type=int, default=1, help="Number of repetitions.")
+    parser.add_argument("--repetitions", type=int, default=5, help="Number of repetitions.")
 
     return parser.parse_args()
 
@@ -144,8 +125,6 @@ if __name__ == '__main__':
     # Save accuracy results to CSV
     if all(future_losses_dict.values()):  # Ensure all methods have valid future_losses
         save_future_losses_to_csv(dataName, args.repetitions, future_losses_dict)
-    else:
-        print(f"Skipping CSV generation for {dataName}, missing future_losses for some methods.")
 
     # Save general results to CSV
     save_results_to_csv(results, dataName)
