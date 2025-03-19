@@ -1,5 +1,9 @@
 /*
 !/Model/
+!/.gitignore
 !/PrefixTreeCDD/
 !/edbn/
-!/.gitignore
+Data/*
+!Data/__init__.py
+!Data/data.py
+
