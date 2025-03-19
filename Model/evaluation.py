@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import sys
 import os
+import os
+import matplotlib.pyplot as plt
+import math
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def plot_accuracy_at_given_index(dataName, repetition, future_losses_dict):
@@ -24,6 +27,7 @@ def plot_accuracy_at_given_index(dataName, repetition, future_losses_dict):
         "DomesticDeclarations": [9878, 14501],
         "InternationalDeclarations": [12467, 17361],
         "RequestForPayment": [4913, 8298],
+        "HelpdeskDrift": [9075, 20655]
     }
     
     # Create plot
@@ -55,10 +59,6 @@ def plot_accuracy_at_given_index(dataName, repetition, future_losses_dict):
     # Save the figure
     plt.savefig(f'Results/results/{dataName}/{dataName}_accuracy_lastdrift.png', dpi=300)
     plt.close()
-
-import os
-import matplotlib.pyplot as plt
-import math
 
 def plot_distributions(dataName, repetition, distribution, history_buffer):
     """
@@ -177,3 +177,32 @@ def save_results_to_csv(results, dataName):
     df.to_csv(csv_filename, index=False)
     
     return df
+
+def save_distribution_to_csv(distribution_data, filename="distribution_results.csv"):
+    """
+    Saves the distribution data to a CSV file.
+
+    Parameters:
+    distribution_data (list of dict): Each dictionary contains the distributions for an update index.
+    filename (str): Name of the output CSV file.
+    """
+    records = []
+    
+    for idx, dist in enumerate(distribution_data):
+        main_window_distribution = dist["main_window_distribution"]
+        updated_hard_buffer_distribution = dist["updated_hard_buffer_distribution"]
+
+        labels = list(set(main_window_distribution.keys()).union(set(updated_hard_buffer_distribution.keys())))
+        labels.sort()
+
+        for label in labels:
+            records.append({
+                "Update_Index": idx + 1,
+                "Class_Label": label,
+                "Window_Distribution": main_window_distribution.get(label, 0),
+                "Hard_Buffer_Distribution": updated_hard_buffer_distribution.get(label, 0)
+            })
+
+    df = pd.DataFrame(records)
+    df.to_csv(filename, index=False)
+    print(f"Distribution data saved to {filename}")
