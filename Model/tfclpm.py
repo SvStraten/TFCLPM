@@ -4,24 +4,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import tensorflow as tf
 import numpy as np
-import time
 from collections import Counter
-from tensorflow.keras.optimizers import Nadam
-
+from tensorflow.keras.optimizers import Nadam #type: ignore
 import os
-import logging
 import tensorflow as tf
-
 from Model.sampler import Sampler
-from Model.experiments import experiment
-from Model.evaluation import plot_accuracy_at_given_index, plot_distributions
-
-from edbn.Methods.SDL.sdl import transform_data
-import matplotlib.pyplot as plt
-import os, sys, time
-from sklearn.metrics import accuracy_score, f1_score
-
-import time
 import pandas as pd
 from Data.data import Data
 from edbn.Utils.LogFile import LogFile
@@ -84,14 +71,13 @@ def preprocess(file):
             continue
 
     # Create batches
-    monthly_batches = d.create_batch(split='months', timeformat=timeformat)  # Get monthly batches
-    daily_batches = d.create_batch(split='days', timeformat=timeformat)
+    monthly_batches = d.create_batch(split='months', timeformat=timeformat) 
 
     # Create a sampler
     data_sampler = Sampler(data=d)
     print("### Sampler done")
 
-    return dataName, data_sampler, basic_model, monthly_batches, daily_batches
+    return dataName, data_sampler, basic_model, monthly_batches
 
 
 class TFCLPM:
@@ -288,18 +274,13 @@ class TFCLPM:
                             history_hard_buffer = sorted(history_hard_buffer, key=lambda f: f[0], reverse=True)[:self.history_buffer_size]
 
                             # Extract labels from the history buffer
-                            history_buffer_labels = [entry[2] for entry in history_hard_buffer]  # Assuming (loss, sample, label) structure
-
-                            # Compute the distribution
-                            history_buffer_distribution = Counter(history_buffer_labels)
+                            history_buffer_labels = [entry[2] for entry in history_hard_buffer]
                         
                             # Extract top 100 diverse samples for final hard buffer
                             max_class_count = max(main_window_distribution.values())
                             class_count = len(main_window_distribution)
                             print("Max class count: ", max_class_count)
-                            # max_per_class = (self.history_buffer_size) // class_count
                             max_per_class = (2 * self.hard_buffer_size) // class_count
-                            # max_per_class = max_class_count
                             print("Max samples per class: ", max_per_class)
                             
                             final_hard_buffer = []

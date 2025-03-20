@@ -28,7 +28,7 @@ def main(method, file, recent_buffer_size, hard_buffer_size, history_buffer_size
 
     if method == 'TFCLPM':
         print("Testing method: TFCLPM")
-        dataName, data_sampler, basic_model, _, _, _= preprocess(file)
+        dataName, data_sampler, basic_model, _ = preprocess(file)
         learning_object = TFCLPM(verbose=False,
                                 seed=123,
                                 dev='cpu',
@@ -81,7 +81,7 @@ def get_args():
     """Parse command-line arguments with standard values as defaults."""
     parser = argparse.ArgumentParser(description="Run experiments with different configurations.")
 
-    parser.add_argument("--dataset", type=str, default="Data/BPIC2015.csv", help="Path to the dataset (CSV file).")
+    parser.add_argument("--dataset", type=str, default="Data/Helpdesk.csv", help="Path to the dataset (CSV file).")
     parser.add_argument("--method", type=str, default="TFCLPM", help="Prediction method to use.")
 
     parser.add_argument("--recent_buffer_size", type=int, default=500, help="Recent buffer size.")
@@ -121,9 +121,6 @@ if __name__ == '__main__':
 
         # Store future_losses for each method
         future_losses_dict[args.method] = future_losses
-
-    # Save accuracy results to CSV
-    if all(future_losses_dict.values()):  # Ensure all methods have valid future_losses
         save_future_losses_to_csv(dataName, args.repetitions, future_losses_dict)
 
     # Save general results to CSV
