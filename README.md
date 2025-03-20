@@ -30,7 +30,7 @@ This script accepts several command-line arguments:
 --repetitions | int | 5 | Number of repetitions.
 ```
 
-### **Example Usage**
+## **Example Usage**
 ```
 python main.py --dataset "Data/HelpdeskDrift.csv"
 ```
