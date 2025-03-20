@@ -34,3 +34,6 @@ This script accepts several command-line arguments:
 ```
 python Model/main.py --dataset "Data/HelpdeskDrift.csv"
 ```
+## Implementation of Competitors
+[IncrementalUpdate](https://github.com/StephenPauwels/edbn)
+[DynaTrainCDD](https://github.com/m-h/DynaTrainCDD)
