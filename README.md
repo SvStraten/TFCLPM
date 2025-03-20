@@ -21,7 +21,7 @@ This script accepts several command-line arguments:
 
 ```
 --dataset| "Data/RecurrentRequest.csv" | Path to the dataset (CSV file). 
---method` | str | "TFCLPM" | Prediction method to use. 
+--method | str | "TFCLPM" | Prediction method to use. 
 --recent_buffer_size | int | 500 | Recent buffer size.
 --hard_buffer_size | int | 100 | Hard buffer size.
 --history_buffer_size | int | 300 | History buffer size.
