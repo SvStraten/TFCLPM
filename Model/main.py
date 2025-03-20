@@ -9,7 +9,7 @@ import logging
 from Model.tfclpm import TFCLPM, preprocess
 from Model.sampler import Sampler
 from Model.experiments import experiment
-from Model.evaluation import plot_accuracy_at_given_index, plot_distributions, save_future_losses_to_csv, save_results_to_csv
+from Model.evaluation import save_future_losses_to_csv, save_results_to_csv, save_distribution_to_csv
 
 from edbn.Methods.SDL.sdl import transform_data
 import matplotlib.pyplot as plt
@@ -125,6 +125,10 @@ if __name__ == '__main__':
 
     # Save general results to CSV
     save_results_to_csv(results, dataName)
+    
+    # Save the distribution to csv
+    save_distribution_to_csv(distribution, filename=f"Results/results/{dataName}/distribution_results_{history_buffer}.csv")
+
 
 
 
