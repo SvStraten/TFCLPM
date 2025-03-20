@@ -32,5 +32,5 @@ This script accepts several command-line arguments:
 
 ## **Example Usage**
 ```
-python main.py --dataset "Data/HelpdeskDrift.csv"
+python Model/main.py --dataset "Data/HelpdeskDrift.csv"
 ```
