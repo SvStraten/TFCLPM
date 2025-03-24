@@ -2,7 +2,7 @@
 
 This is the official GitHub repository for Task-Free Continual Learning for predictive Process Mining (TFCLPM). 
 
-![The Framework](TFCLPM.png)
+![The Framework](framework.png)
 
 ## Datasets
 
