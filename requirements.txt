@@ -3,6 +3,10 @@ pandas
 scipy
 matplotlib
 seaborn
+<<<<<<< HEAD
 pm4py 
+=======
+pm4py
+>>>>>>> 78096da628d7fdce16160fa76d1cb576f8fb496e
 tensorflow
 
