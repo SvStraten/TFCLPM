@@ -3,7 +3,6 @@ pandas
 scipy
 matplotlib
 seaborn
-pm4py
-scikit-multiflow 
+pm4py 
 tensorflow
 

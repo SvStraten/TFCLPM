@@ -366,8 +366,8 @@ class LogFile:
         train = self.contextdata.loc[train_inds]
         test = self.contextdata.loc[test_inds]
 
-        print("Train:", len(train_inds))
-        print("Test:", len(test_inds))
+        # print("Train:", len(train_inds))
+        # print("Test:", len(test_inds))
 
         train_logfile = LogFile(None, None, None, None, self.time, self.trace, self.activity, self.values, False, False)
         train_logfile.filename = self.filename

@@ -38,7 +38,7 @@ def preprocess(file):
 
     # Select the prediction method
     m = Methods.get_prediction_method("SDL")
-    print("Prediction method:", m)
+    print(m)
     
     # Prepare the data
     s = setting.STANDARD
