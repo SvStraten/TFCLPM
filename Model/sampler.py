@@ -4,11 +4,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import os
 import logging
-import tensorflow as tf
+import tensorflow as tf #type: ignore
 
-import numpy as np
+import numpy as np #type: ignore
 import os, sys, time
-import numpy.random as rn
+import numpy.random as rn #type: ignore 
 from edbn.Methods.SDL.sdl import transform_data
 
 class Sampler():

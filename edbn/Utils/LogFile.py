@@ -5,9 +5,9 @@
 import copy
 import multiprocessing as mp
 
-import numpy as np
-import pandas as pd
-from dateutil.parser import parse
+import numpy as np  #type: ignore
+import pandas as pd #type: ignore
+from dateutil.parser import parse #type: ignore
 import math
 
 

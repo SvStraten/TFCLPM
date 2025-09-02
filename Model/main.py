@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
-import tensorflow as tf
+import tensorflow as tf #type: ignore
 import logging
 
 from Model.tfclpm import TFCLPM, preprocess
@@ -12,13 +12,13 @@ from Model.experiments import experiment
 from Model.evaluation import save_future_losses_to_csv, save_results_to_csv, save_distribution_to_csv
 
 from edbn.Methods.SDL.sdl import transform_data
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #type: ignore
 import os, sys, time
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score #type: ignore
 import argparse
 
 import time
-import pandas as pd
+import pandas as pd #type: ignore
 from Data.data import Data
 from edbn.Utils.LogFile import LogFile
 import edbn.Predictions.setting as setting

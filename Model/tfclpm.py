@@ -2,14 +2,14 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import tensorflow as tf
-import numpy as np
+import tensorflow as tf #type: ignore
+import numpy as np #type: ignore
 from collections import Counter
 from tensorflow.keras.optimizers import Nadam #type: ignore
 import os
-import tensorflow as tf
+import tensorflow as tf #type: ignore
 from Model.sampler import Sampler
-import pandas as pd
+import pandas as pd #type: ignore
 from Data.data import Data
 from edbn.Utils.LogFile import LogFile
 import edbn.Predictions.setting as setting
