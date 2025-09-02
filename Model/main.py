@@ -51,9 +51,7 @@ def main(method, file, recent_buffer_size, hard_buffer_size, history_buffer_size
 
     tags=[
         'Online Continual',
-        # 'Online Continual No Hardbuffer',
-        # 'Online No Hardbuffer',
-        # 'Online' 
+        # 'Online Continual No Hardbuffer'
         ]
     
     future_losses, prediction_results, distribution = experiment(data_sampler, learning_object, tags)
@@ -130,6 +128,7 @@ if __name__ == '__main__':
     save_distribution_to_csv(distribution, filename=f"Results/results/{dataName}/distribution_results_{history_buffer}.csv")
     
     #Done
+
 
 
 
