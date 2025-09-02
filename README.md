@@ -1,6 +1,6 @@
 # TFCLPM
 
-This is the official GitHub repository for Task-Free diversity aware Continual Learning for predictive Process Mining (TFCLPM). 
+This is the official GitHub repository for Task-Free diversity-aware Continual Learning for predictive Process Mining (TFCLPM). 
 
 ![The Framework](framework.png)
 
