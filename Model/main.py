@@ -87,7 +87,7 @@ def get_args():
     parser.add_argument("--history_buffer_size", type=int, default=300, help="History buffer size.")
     parser.add_argument("--MAS_weight", type=float, default=0.5, help="MAS weight.")
     parser.add_argument("--history_buffer", type=bool, default=True, help="Whether to use history buffer (True/False).")
-    parser.add_argument("--repetitions", type=int, default=5, help="Number of repetitions.")
+    parser.add_argument("--repetitions", type=int, default=1, help="Number of repetitions.")
 
     return parser.parse_args()
 
