@@ -35,3 +35,5 @@ This script accepts several command-line arguments:
 python Model/main.py --dataset "Data/HelpdeskDrift.csv"
 ```
 
+Note that if you want to exclude the Hard Buffer, you need to uncomment 'Online Continual No Hardbuffer' instead of 'Online Continual'.
+
