@@ -4,6 +4,5 @@ scipy
 matplotlib
 seaborn
 pm4py
-scikit-multiflow 
 tensorflow
 
