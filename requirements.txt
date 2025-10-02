@@ -5,4 +5,5 @@ matplotlib
 seaborn
 pm4py 
 tensorflow
+sklearn
 
