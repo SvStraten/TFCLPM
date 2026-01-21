@@ -8,8 +8,8 @@ This is the official GitHub repository for Task-Free diversity-aware Continual L
 
 All the datasets provided in the paper can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1HT0_BM1AvMBQOpQglEH8xoT7NiiSaqVG?usp=share_link). After downloading, locate the .csv files in the 'Data' folder.
 
-### Benchmark Table
-Below is the list of datasets used in the study along with their drift characteristics and competitor comparisons.
+### Hyperparameter Setup for Competitors:
+Window Size
 
 | Dataset | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
