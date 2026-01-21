@@ -11,20 +11,20 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 ### Benchmark Table
 Below is the list of datasets used in the study along with their drift characteristics and competitor comparisons.
 
-| Dataset | Drift Type | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
+| Dataset | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** | Sudden + Recurrent | | | | | | |
-| **ORI5000** | Sudden + Recurrent | | | | | | |
-| **RIO5000** | Sudden + Recurrent | | | | | | |
-| **ROI5000** | Sudden + Recurrent | | | | | | |
-| **OIR5000** | Sudden + Recurrent | | | | | | |
-| **InternationalDeclarations** | Gradual | | | | | | |
-| **DomesticDeclarations** | Gradual | | | | | | |
-| **RequestForPayment** | Gradual | | | | | | |
-| **BPIC 2017** | No Drift | | | | | | |
-| **BPIC 2015** | Sudden | | | | | | |
-| **HelpdeskDrift** | Sudden | | | | | | |
-| **RecurrentRequest** | Gradual + Recurrent | | | | | | |
+| **IRO5000** |  | | | | | |
+| **ORI5000** |  | | | | | |
+| **RIO5000** |  | | | | | |
+| **ROI5000** |  | | | | | |
+| **OIR5000** |  | | | | | |
+| **InternationalDeclarations** | | | | | | |
+| **DomesticDeclarations** | | | | | | |
+| **RequestForPayment** | | | | | | |
+| **BPIC 2017** | | | | | | |
+| **BPIC 2015** | | | | | | |
+| **HelpdeskDrift** | | | | | | |
+| **RecurrentRequest** | | | | | | |
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
