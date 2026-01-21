@@ -8,6 +8,30 @@ This is the official GitHub repository for Task-Free diversity-aware Continual L
 
 All the datasets provided in the paper can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1HT0_BM1AvMBQOpQglEH8xoT7NiiSaqVG?usp=share_link). After downloading, locate the .csv files in the 'Data' folder.
 
+### Benchmark Table
+Below is the list of datasets used in the study along with their drift characteristics and competitor comparisons.
+
+| Dataset | Drift Type | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **IRO5000** | Sudden + Recurrent | | | | | | |
+| **ORI5000** | Sudden + Recurrent | | | | | | |
+| **RIO5000** | Sudden + Recurrent | | | | | | |
+| **ROI5000** | Sudden + Recurrent | | | | | | |
+| **OIR5000** | Sudden + Recurrent | | | | | | |
+| **InternationalDeclarations** | Gradual | | | | | | |
+| **DomesticDeclarations** | Gradual | | | | | | |
+| **RequestForPayment** | Gradual | | | | | | |
+| **BPIC 2017** | No Drift | | | | | | |
+| **BPIC 2015** | Sudden | | | | | | |
+| **HelpdeskDrift** | Sudden | | | | | | |
+| **RecurrentRequest** | Gradual + Recurrent | | | | | | |
+
+## Installation
+To install the required libraries, run the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+
 ## Installation
 To install the required libraries, run the following command in your terminal:
 
