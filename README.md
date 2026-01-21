@@ -11,20 +11,20 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 ### Hyperparameter Setup for Competitors:
 Window Size
 
-| Dataset | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
+| Dataset | w = Last Drift | w = 1| Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **ORI5000** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **RIO5000** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **ROI5000** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **OIR5000** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **InternationalDeclarations** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **DomesticDeclarations** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **RequestForPayment** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **BPIC 2017** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **BPIC 2015** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **HelpdeskDrift** | 500 | 500 | 500 | 500 | 500 | 500 |
-| **RecurrentRequest** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **IRO5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **ORI5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **RIO5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **ROI5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **OIR5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **InternationalDeclarations** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **DomesticDeclarations** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **RequestForPayment** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **BPIC 2017** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **BPIC 2015** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **HelpdeskDrift** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **RecurrentRequest** | 1 month | 1 month | 500 | 500 | 500 | 500 |
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
