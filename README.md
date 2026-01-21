@@ -21,10 +21,10 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 | **InternationalDeclarations** | 1 month | 1 month | 500 | 500 | 500 | 500 |
 | **DomesticDeclarations** | 1 month | 1 month | 500 | 500 | 500 | 500 |
 | **RequestForPayment** | 1 month | 1 month | 500 | 100 | 500 | 500 |
-| **BPIC 2017** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **BPIC 2017** | 1 month | 1 month | 500 | 1000 | 500 | 500 |
 | **BPIC 2015** | 1 month | 1 month | 500 | 500 | 500 | 500 |
 | **HelpdeskDrift** | 1 month | 1 month | 500 | 500 | 500 | 500 |
-| **RecurrentRequest** | 1 month | 1 month | 500 | 500 | 500 | 500 |
+| **RecurrentRequest** | 1 month | 1 month | 500 | 100 | 500 | 500 |
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
