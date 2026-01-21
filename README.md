@@ -22,7 +22,7 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 | **DomesticDeclarations** | 1 month | 1 month | 100 | 500 | 100 | 100 |
 | **RequestForPayment** | 1 month | 1 month | 100 | 100 | 100 | 100 |
 | **BPIC 2017** | 1 month | 1 month | 100 | 1000 | 100 | 100 |
-| **BPIC 2015** | 1 month | 1 month | 100 | 500 | 100 | 00 |
+| **BPIC 2015** | 1 month | 1 month | 100 | 500 | 100 | 100 |
 | **HelpdeskDrift** | 1 month | 1 month | 100 | 500 | 100 | 100 |
 | **RecurrentRequest** | 1 month | 1 month | 100 | 100 | 100 | 100 |
 
