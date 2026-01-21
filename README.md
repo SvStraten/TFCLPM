@@ -11,7 +11,7 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 ## Hyperparameter Setup for Baselines
 **Window Size**.
 
-| Dataset | w = Last Drift | w = 1 | DynaTrainCDD | Incremental | FullRetrain | DDM |
+| Dataset | w = Last Drift [12] | w = 1 [12] | DynaTrainCDD [6] | Incremental [14] | FullRetrain [14] | DDM [13] |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **IRO5000** | 1 month | 1 month | 100 | 100 | 500 | 100 |
 | **ORI5000** | 1 month | 1 month | 100 | 100 | 500 | 100 |
