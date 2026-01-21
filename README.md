@@ -12,20 +12,25 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 Window Size
 
 | Dataset | Competitor 1 | Competitor 2 | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** |  | | | | | |
-| **ORI5000** |  | | | | | |
-| **RIO5000** |  | | | | | |
-| **ROI5000** |  | | | | | |
-| **OIR5000** |  | | | | | |
-| **InternationalDeclarations** | | | | | | |
-| **DomesticDeclarations** | | | | | | |
-| **RequestForPayment** | | | | | | |
-| **BPIC 2017** | | | | | | |
-| **BPIC 2015** | | | | | | |
-| **HelpdeskDrift** | | | | | | |
-| **RecurrentRequest** | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **IRO5000** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **ORI5000** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **RIO5000** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **ROI5000** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **OIR5000** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **InternationalDeclarations** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **DomesticDeclarations** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **RequestForPayment** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **BPIC 2017** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **BPIC 2015** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **HelpdeskDrift** | 500 | 500 | 500 | 500 | 500 | 500 |
+| **RecurrentRequest** | 500 | 500 | 500 | 500 | 500 | 500 |
 
+## Installation
+To install the required libraries, run the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
 ## Installation
 To install the required libraries, run the following command in your terminal:
 
