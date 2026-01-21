@@ -8,8 +8,8 @@ This is the official GitHub repository for Task-Free diversity-aware Continual L
 
 All the datasets provided in the paper can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1HT0_BM1AvMBQOpQglEH8xoT7NiiSaqVG?usp=share_link). After downloading, locate the .csv files in the 'Data' folder.
 
-## Hyperparameter Setup for Competitors
-Window Size (* means that the value is fixed because of the nature of the method).
+## Hyperparameter Setup for Baselines
+**Window Size** (* means that the value is fixed because of the nature of the method).
 
 | Dataset | w = Last Drift * | w = 1 * | DynaTrainCDD | Incremental | FullRetrain | DDM |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
