@@ -11,7 +11,7 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 ### Hyperparameter Setup for Competitors:
 Window Size (* means that the value is fixed because of the nature of the method).
 
-| Dataset | w = Last Drift | w = 1| Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
+| Dataset | w = Last Drift * | w = 1 * | Competitor 3 | Competitor 4 | Competitor 5 | Competitor 6 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **IRO5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
 | **ORI5000** | 1 month | 1 month | 500 | 500 | 500 | 500 |
