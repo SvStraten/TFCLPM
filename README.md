@@ -28,6 +28,10 @@ Methods with (*) use a fixed window size that was provided by the paper.
 | **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
+### Additional Hyperparameters
+
+
+
 ## Installation
 To install the required libraries, run the following command in your terminal:
 
