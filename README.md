@@ -13,18 +13,18 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 
 | Dataset | w = Last Drift [12] | w = 1 [12] | DynaTrainCDD [6] | Incremental [14] | FullRetrain [14] | DDM [13] |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **ORI5000** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **RIO5000** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **ROI5000** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **OIR5000** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **InternationalDeclarations** | 1 month | 1 month | 100 | 500 | 100 | 100 |
-| **DomesticDeclarations** | 1 month | 1 month | 100 | 500 | 100 | 100 |
-| **RequestForPayment** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **BPIC 2017** | 1 month | 1 month | 100 | 1000 | 100 | 100 |
-| **BPIC 2015** | 1 month | 1 month | 100 | 500 | 100 | 100 |
-| **HelpdeskDrift** | 1 month | 1 month | 100 | 500 | 100 | 100 |
-| **RecurrentRequest** | 1 month | 1 month | 100 | 100 | 100 | 100 |
+| **IRO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **ORI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **RIO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **ROI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **OIR5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **InternationalDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
+| **DomesticDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
+| **RequestForPayment** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **BPIC 2017** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **BPIC 2015** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
+| **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
+| **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
