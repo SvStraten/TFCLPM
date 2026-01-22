@@ -9,9 +9,11 @@ This is the official GitHub repository for Task-Free diversity-aware Continual L
 All the datasets provided in the paper can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1HT0_BM1AvMBQOpQglEH8xoT7NiiSaqVG?usp=share_link). After downloading, locate the .csv files in the 'Data' folder.
 
 ## Hyperparameter Setup for Baselines
-**Window Size**. Methods with (*) use a fixed window size that was provided by the paper.
+### Window Size
 
-| Dataset | w = Last Drift [12] | w = 1 [12] | DynaTrainCDD [6] | Incremental [14] | FullRetrain [14] | DDM [13] |
+Methods with (*) use a fixed window size that was provided by the paper.
+
+| Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **IRO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 | **ORI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
