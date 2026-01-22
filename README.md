@@ -29,7 +29,7 @@ Methods with (*) use a fixed window size that was provided by the paper.
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
 ### Additional Hyperparameters
-
+**DynaTrainCDD**: Number of prefix trees = 10, Lambda = 0.25
 
 
 ## Installation
