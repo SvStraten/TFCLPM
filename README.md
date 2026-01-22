@@ -31,19 +31,8 @@ Methods with (*) use a fixed window size that was provided by the paper.
 ## Installation
 To install the required libraries, run the following command in your terminal:
 
-```bash
+```
 pip install -r requirements.txt
-## Installation
-To install the required libraries, run the following command in your terminal:
-
-```bash
-pip install -r requirements.txt
-
-## Installation
-To install the required libraries, run the following command in your terminal:
-
-```bash
-pip -r install requirements.txt
 ```
 
 ## Command-Line Arguments
