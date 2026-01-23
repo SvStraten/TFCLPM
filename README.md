@@ -29,8 +29,13 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
 ### Additional Fixed Parameters
-- **DynaTrainCDD [6]**: Number of prefix trees = 10, Weibull_k = 1.t, Weibull_lambda = 0.6, delta = 0.002, learning rate = 0.002, batch size = 32, epochs = 10
-- **DDM [13]**: learning rate = 0.002, batch size = 32, epochs = 10
+- **w = Last Drift [12]:** learning rate = 0.002, batch size = 32, epochs = 10
+- **w = 1 [12]:** learning rate = 0.002, batch size = 32, epochs = 10
+- **DynaTrainCDD [6]:** Number of prefix trees = 10, Weibull_k = 1.5, Weibull_lambda = 0.6, delta = 0.002, learning rate = 0.002, batch size = 32, epochs = 10
+- **Incremental [14]:** learning rate = 0.002, batch size = 32, epochs = 10
+- **FullRetrain [14]:** learning rate = 0.002, batch size = 32, epochs = 5
+- **DDM [13]:** learning rate = 0.002, batch size = 32, epochs = 10
+
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
