@@ -28,7 +28,7 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 | **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
-### Additional Fixed Parameters
+### Additional Parameters
 - **w = Last Drift [12]:** learning rate = 0.002, batch size = 32, epochs = 10
 - **w = 1 [12]:** learning rate = 0.002, batch size = 32, epochs = 10
 - **DynaTrainCDD [6]:** Number of prefix trees = 10, Weibull_k = 1.5, Weibull_lambda = 0.6, delta = 0.002, learning rate = 0.002, batch size = 32, epochs = 10
