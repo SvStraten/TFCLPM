@@ -13,7 +13,7 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 
 Methods with (*) use a fixed window size that was provided by the paper.
 
-| Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] |
+| Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] (*)|
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **IRO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 | **ORI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
@@ -30,8 +30,6 @@ Methods with (*) use a fixed window size that was provided by the paper.
 
 ### Additional Hyperparameters
 **DynaTrainCDD [6]**: Number of prefix trees = 10, Lambda = 0.25
-
-
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
