@@ -11,7 +11,7 @@ All the datasets provided in the paper can be downloaded from the following [Goo
 ## Hyperparameter Setup for Baselines
 ### Window Size
 
-Methods with (*) use a fixed window size that was provided by the paper. The other baselines' values arise from hyperparameter tuning on the validation set (first 15% of stream data).
+Methods with (*) use a fixed window size that was provided by the paper. The other baselines' values arise from hyperparameter tuning on the validation set (first 15% of the data stream).
 
 | Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] (*)|
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
