@@ -28,8 +28,9 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 | **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
-### Additional Hyperparameters
-**DynaTrainCDD [6]**: Number of prefix trees = 10, Lambda = 0.25
+### Additional Fixed Parameters
+**DynaTrainCDD [6]**: Number of prefix trees = 10, Weibull_k = 1.t, Weibull_lambda = 0.6, delta = 0.002, learning rate = 0.002, batch size = 32, 10 epochs per window
+**DDM [13]**: learning rate = 0.002, batch size = 32, 10 epochs per window
 
 ## Installation
 To install the required libraries, run the following command in your terminal:
