@@ -9,11 +9,10 @@ This is the official GitHub repository for Task-Free diversity-aware Continual L
 All the datasets provided in the paper can be downloaded from the following [Google Drive link](https://drive.google.com/drive/folders/1HT0_BM1AvMBQOpQglEH8xoT7NiiSaqVG?usp=share_link). After downloading, locate the .csv files in the 'Data' folder.
 
 ## Hyperparameter Setup for Baselines
-### Window Size
 
-Methods with (*) use a fixed window size that was provided by the paper. The other baselines' values arise from hyperparameter tuning on the validation set (first 15% of the data stream).
+Methods with (*) use a fixed window size that was provided by the paper.
 
-| Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] (*)|
+| Dataset | w = Last Drift [12] (*) <br> *(lr=0.002, ep=5)* | w = 1 [12] (*) <br> *(lr=0.002, ep=10)* | DynaTrainCDD [6] (*) <br> *(lr=0.002, ep=10)* | Incremental [14] <br> *(lr=0.002, ep=10)* | FullRetrain [14] <br> *(lr=0.002, ep=10)* | DDM [13] (*) <br> *(lr=0.002, ep=10)* |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **IRO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
 | **ORI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
@@ -27,14 +26,6 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 | **BPIC 2015** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
 | **HelpdeskDrift** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
 | **RecurrentRequest** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
-
-### Additional Parameters
-- **w = Last Drift [12]:** learning rate = 0.002, batch size = 32, epochs = 10
-- **w = 1 [12]:** learning rate = 0.002, batch size = 32, epochs = 10
-- **DynaTrainCDD [6]:** Number of prefix trees = 10, learning rate = 0.002, batch size = 32, epochs = 10
-- **Incremental [14]:** learning rate = 0.002, batch size = 32, epochs = 10
-- **FullRetrain [14]:** learning rate = 0.002, batch size = 32, epochs = 5
-- **DDM [13]:** learning rate = 0.002, batch size = 32, epochs = 10
 
 
 ## Installation
