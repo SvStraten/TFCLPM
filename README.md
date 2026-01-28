@@ -23,8 +23,8 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 | **InternationalDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **DomesticDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **RequestForPayment** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **BPIC 2017** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **BPIC 2015** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
+| **BPIC 2017** | 1 month | 1 month | 100 | 100 | 100 | 100 |
+| **BPIC 2015** | 1 month | 1 month | 100 | 500 | 100 | 100 |
 | **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
 | **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
 
