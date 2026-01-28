@@ -15,18 +15,18 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 
 | Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] (*)|
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **ORI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **RIO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **ROI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **OIR5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **InternationalDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
-| **DomesticDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
-| **RequestForPayment** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **BPIC 2017** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
-| **BPIC 2015** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
-| **HelpdeskDrift** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
-| **RecurrentRequest** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **IRO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **ORI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **RIO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **ROI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **OIR5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **InternationalDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
+| **DomesticDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
+| **RequestForPayment** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **BPIC 2017** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
+| **BPIC 2015** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
+| **HelpdeskDrift** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | w = 500 | w = 100 | w = 100 |
+| **RecurrentRequest** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | w = 100 | w = 100 | w = 100 |
 
 ### Additional Parameters
 - **w = Last Drift [12]:** learning rate = 0.002, batch size = 32, epochs = 10
