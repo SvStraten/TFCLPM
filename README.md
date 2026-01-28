@@ -15,23 +15,23 @@ Methods with (*) use a fixed window size that was provided by the paper. The oth
 
 | Dataset | w = Last Drift [12] (*) | w = 1 [12] (*) | DynaTrainCDD [6] (*) | Incremental [14] | FullRetrain [14] | DDM [13] (*)|
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IRO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **ORI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **RIO5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **ROI5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **OIR5000** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **InternationalDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
-| **DomesticDeclarations** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
-| **RequestForPayment** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
-| **BPIC 2017** | 1 month | 1 month | 100 | 100 | 100 | 100 |
-| **BPIC 2015** | 1 month | 1 month | 100 | 500 | 100 | 100 |
-| **HelpdeskDrift** | 1 month | 1 month | 1000 | 500 | 100 | 100 |
-| **RecurrentRequest** | 1 month | 1 month | 1000 | 100 | 100 | 100 |
+| **IRO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **ORI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **RIO5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **ROI5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **OIR5000** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **InternationalDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
+| **DomesticDeclarations** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
+| **RequestForPayment** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **BPIC 2017** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
+| **BPIC 2015** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
+| **HelpdeskDrift** | 1 month | 1 month | $w_{init}=1000, W_k=0.8, W_\lambda=0.25$ | 500 | 100 | 100 |
+| **RecurrentRequest** | 1 month | 1 month | $w_{init}=100, W_k=0.8, W_\lambda=0.25$ | 100 | 100 | 100 |
 
 ### Additional Parameters
 - **w = Last Drift [12]:** learning rate = 0.002, batch size = 32, epochs = 10
 - **w = 1 [12]:** learning rate = 0.002, batch size = 32, epochs = 10
-- **DynaTrainCDD [6]:** Number of prefix trees = 10, Weibull_k = 1.5, Weibull_lambda = 0.6, delta = 0.002, learning rate = 0.002, batch size = 32, epochs = 10
+- **DynaTrainCDD [6]:** Number of prefix trees = 10, learning rate = 0.002, batch size = 32, epochs = 10
 - **Incremental [14]:** learning rate = 0.002, batch size = 32, epochs = 10
 - **FullRetrain [14]:** learning rate = 0.002, batch size = 32, epochs = 5
 - **DDM [13]:** learning rate = 0.002, batch size = 32, epochs = 10
